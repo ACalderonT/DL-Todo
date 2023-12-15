@@ -1,0 +1,247 @@
+$primary-text-color: #1c1c1c;
+$secondary-text-color: #7c7c7c;
+$task-completed: #008000;
+$search: #0096C7;
+$font-stack: "Montserrat", sans-serif;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-stack;
+  color: $primary-text-color;
+}
+
+header {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.task-count-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 0.5px solid $primary-text-color;
+  border-bottom: 0.5px solid $primary-text-color;
+  width: 40%;
+}
+
+.column-count-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 20px 15px;
+  gap: 20px;
+
+  p {
+    font-size: 40px;
+    margin: 0;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 25px;
+  width: 100%;
+  height: 100%;
+  gap: 25px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  color: $primary-text-color;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px 0;
+  gap: 15px;
+  width: 40%;
+}
+
+.task-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.task-header-info {
+  display: flex;
+  gap: 20px;
+  padding: 0 50px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 50px;
+}
+
+.task-info {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 69.5px;
+  gap: 10px;
+}
+
+.uncheck-btn {
+    color: $secondary-text-color;
+}
+
+.check-btn {
+  color: $task-completed;
+}
+
+.delete-btn {
+  color: #e51d2e;
+}
+
+.task-done {
+  color: $secondary-text-color;
+  text-decoration: line-through;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px 0;
+  width: 40%;
+}
+
+.add-item {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+
+    input {
+      border: none;
+      border-bottom: .5px solid $primary-text-color;
+      width: 200px;
+      padding: 5px 10px;
+      
+      &:focus {
+        outline: none;
+        border-bottom-color: $task-completed;
+        transition: all .5s ease-in;
+      }
+
+      &:focus + button {
+        background-color: $task-completed;
+        color: white;
+        transition: all 1s ease-in-out;
+      }
+
+      &:focus + button:disabled {
+        background-color: #00800080;
+      }
+    }
+
+    button {
+      height: 100%;
+      transition: all .5s ease-in-out;
+
+      &:disabled {
+        transform: none;
+        cursor: not-allowed;
+      }
+    }
+}
+
+.search-item {
+
+    input {
+      border: none;
+      border-bottom: .5px solid $primary-text-color;
+      width: 200px;
+      padding: 5px 10px;
+
+      &:focus {
+        outline: none;
+        border-bottom-color: $search;
+      }
+
+      &:focus + button > i {
+        color: $search;
+        transition: all .5s ease-in;
+      }
+
+    }
+
+    button {
+      border-left: 1.5px solid $primary-text-color;
+      cursor: default;
+      transform: none;
+    }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  border: .2px solid $primary-text-color;
+  background-color: $primary-text-color;
+  color: white;
+  width: 100vw;
+  padding: 10px;
+
+  button {
+    font-size: large;
+
+    a:visited,
+    a:link,
+    a:active {
+      color: white;
+    }
+  }
+}

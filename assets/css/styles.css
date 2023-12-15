@@ -1,0 +1,221 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #1c1c1c;
+}
+
+header {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.task-count-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 0.5px solid #1c1c1c;
+  border-bottom: 0.5px solid #1c1c1c;
+  width: 40%;
+}
+
+.column-count-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  padding: 20px 15px;
+  gap: 20px;
+}
+.column-count-container p {
+  font-size: 40px;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 25px;
+  width: 100%;
+  height: 100%;
+  gap: 25px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #1c1c1c;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  transform: translateY(1px);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 15px 0;
+  gap: 15px;
+  width: 40%;
+}
+
+.task-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.task-header-info {
+  display: flex;
+  gap: 20px;
+  padding: 0 50px;
+}
+.task-header-info span {
+  font-weight: bold;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 50px;
+}
+
+.task-info {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 69.5px;
+  gap: 10px;
+}
+
+.uncheck-btn {
+  color: #7c7c7c;
+}
+
+.check-btn {
+  color: #008000;
+}
+
+.delete-btn {
+  color: #e51d2e;
+}
+
+.task-done {
+  color: #7c7c7c;
+  text-decoration: line-through;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 30px 0;
+  width: 40%;
+}
+
+.add-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+}
+.add-item input {
+  border: none;
+  border-bottom: 0.5px solid #1c1c1c;
+  width: 200px;
+  padding: 5px 10px;
+}
+.add-item input:focus {
+  outline: none;
+  border-bottom-color: #008000;
+  transition: all 0.5s ease-in;
+}
+.add-item input:focus + button {
+  background-color: #008000;
+  color: white;
+  transition: all 1s ease-in-out;
+}
+.add-item input:focus + button:disabled {
+  background-color: rgba(0, 128, 0, 0.5019607843);
+}
+.add-item button {
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.add-item button:disabled {
+  transform: none;
+  cursor: not-allowed;
+}
+
+.search-item input {
+  border: none;
+  border-bottom: 0.5px solid #1c1c1c;
+  width: 200px;
+  padding: 5px 10px;
+}
+.search-item input:focus {
+  outline: none;
+  border-bottom-color: #0096C7;
+}
+.search-item input:focus + button > i {
+  color: #0096C7;
+  transition: all 0.5s ease-in;
+}
+.search-item button {
+  border-left: 1.5px solid #1c1c1c;
+  cursor: default;
+  transform: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  border: 0.2px solid #1c1c1c;
+  background-color: #1c1c1c;
+  color: white;
+  width: 100vw;
+  padding: 10px;
+}
+footer button {
+  font-size: large;
+}
+footer button a:visited,
+footer button a:link,
+footer button a:active {
+  color: white;
+}/*# sourceMappingURL=styles.css.map */

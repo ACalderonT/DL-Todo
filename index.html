@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>To Do</title>
+    <script
+      src="https://kit.fontawesome.com/a0f469c4a5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header><h1>To Do List</h1></header>
+    <div class="task-count-container">
+      <div class="column-count-container">
+        <span>Total tasks</span>
+        <p id="total-tasks">0</p>
+      </div>
+      <div class="column-count-container">
+        <span>Completed tasks</span>
+        <p id="completed-tasks">0</p>
+      </div>
+    </div>
+    <main>
+      <div class="input-container">
+        <div class="add-item">
+          <input
+            id="add-input"
+            type="text"
+            placeholder="Type new task ..."
+            oninput="onChangeNewTask()"
+          />
+          <button id="add-btn" onclick="onClickNew()" disabled>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+        <div class="search-item">
+          <input
+            id="seach-input"
+            type="search"
+            placeholder="Type to search ..."
+            oninput="onSearch()"
+          />
+          <button>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+
+      <section>
+        <div class="task-header-container">
+          <div class="task-header-info">
+            <span>ID</span>
+            <span>NAME</span>
+          </div>
+          <div class="task-header-info">
+            <span>ACTIONS</span>
+          </div>
+        </div>
+        <ul id="list-container"></ul>
+      </section>
+    </main>
+    <footer>
+      <button id="get-email" value="ac.calderont@gmail.com" onclick="onClickEmail()">
+        <a href="#"><i class="fa-brands fa-google"></i></a>
+      </button>
+      <button>
+        <a href="https://www.linkedin.com/in/acalderont" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </button>
+      <button>
+        <a href="https://github.com/ACalderonT" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </button>
+    </footer>
+    <!-- JS Files -->
+    <script src="./assets/js/addTaskTemplate.js"></script>
+    <script src="./assets/js/initialTasks.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
